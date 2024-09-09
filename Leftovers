@@ -1,0 +1,11 @@
+  "c8":{
+    "reporter": ["html", "text"],
+    "reporterOptions": {
+      "outputDir": "coverage"
+    }, 
+    "lines": 100,
+    "branches": 100,
+    "statements": 100, 
+    "functions": 100, 
+    "src": ["src/js"]
+  }

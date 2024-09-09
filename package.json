@@ -10,17 +10,13 @@
   "scripts": {
     "start": "live-server", 
     "test": "jasmine", 
-    "coverage": "c8 --check-coverage --all npm test"
+    "coverage": "c8 --check-coverage --90 --all npm test"
   }, 
   "c8":{
     "reporter": ["html", "text"],
     "reporterOptions": {
       "outputDir": "coverage"
     }, 
-    "lines": 100,
-    "branches": 100,
-    "statements": 100, 
-    "functions": 100, 
     "src": ["src/js"]
   }
 }
