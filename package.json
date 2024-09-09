@@ -1,22 +1,33 @@
 {
-  "type":"module",
+  "type": "module",
   "dependencies": {
     "jasmine": "^5.3.0",
     "live-server": "^1.2.0"
   },
   "devDependencies": {
-    "c8": "^10.1.2"
+    "@eslint/js": "^9.10.0",
+    "c8": "^10.1.2",
+    "eslint": "^9.10.0",
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.4.0"
   },
   "scripts": {
-    "start": "live-server", 
-    "test": "jasmine", 
-    "coverage": "c8 --check-coverage --90 --all npm test"
-  }, 
-  "c8":{
-    "reporter": ["html", "text"],
+    "start": "live-server",
+    "test": "jasmine",
+    "coverage": "c8 --check-coverage --90 --all npm test",
+    "lint": "eslint **/*.js",
+    "pre-commit": "npm run lint && npm run test && npm run coverage"
+  },
+  "c8": {
+    "reporter": [
+      "html",
+      "text"
+    ],
     "reporterOptions": {
       "outputDir": "coverage"
-    }, 
-    "src": ["src/js"]
+    },
+    "src": [
+      "src/js"
+    ]
   }
 }

@@ -13,4 +13,4 @@ describe('math.js', function(){
         expect(power(4, 0)).toEqual(1);
         expect(power(4, 1)).toEqual(4);
     }); 
-})
+});

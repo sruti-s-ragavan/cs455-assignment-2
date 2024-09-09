@@ -5,7 +5,7 @@ function computeTables(maxNumber, untilTimes) {
     for(var i=1; i<=maxNumber; i++){
         var row = [];
         for (var j=1; j<=untilTimes; j++){
-            row.push(multiply(i, j))
+            row.push(multiply(i, j));
         }
         tables.push(row);
     }
@@ -37,7 +37,7 @@ function updateTable(tables){
         }
         thead.appendChild(row);
         tableElement.appendChild(thead);
-    }
+    };
 
     var renderTableRows = function(tables){
         var tbody = document.createElement("tbody");
@@ -66,4 +66,4 @@ function updateTable(tables){
 window.onload = function() {
     var tables = computeTables(10, 16);
     updateTable(tables);
-}
+};
